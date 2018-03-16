@@ -1,4 +1,4 @@
 # simpleCrud
-*Object-Oriented
-*MVC architecture pattern
-*Page control
+*	Object-Oriented
+*	MVC architecture pattern
+*	Page control
