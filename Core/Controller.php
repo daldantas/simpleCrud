@@ -12,13 +12,16 @@ class Controller
 		$this->url = isset($_GET['url']) ? explode('/', $_GET['url']) : [0 => 'users', 1 => 'index'];
 		$this->controller = $this->url[0];
 		$this->method	= $this->url[1];
+		$method = $this->method;
 		require_once "Controllers/".$this->controller.".php";
 		$this->class = new $this->controller;
 		$this->count = count($this->url);
 		switch ($this->count)
 		{
-			default:
-				$method = $this->method;
+			case 3:
+				$this->dados = $this->class->$method($this->url[2]);
+				break;
+			default:	
 				$this->dados = $this->class->$method();
 				break;
 		}

@@ -15,8 +15,8 @@
         <td><?=$u['email']?></td>
         <td><?=$u['cpf']?></td>
         <td>
-          <a href=""><i class="material-icons blue-text">edit</i></a>
-          <a href=""><i class="material-icons red-text">delete</i></a>
+          <a href="?url=users/edit/<?=$u['id']?>"><i class="material-icons blue-text">edit</i></a>
+          <a href="?url=users/remove/<?=$u['id']?>"><i class="material-icons red-text">delete</i></a>
         </td>
       </tr>
     <?php endforeach ?>

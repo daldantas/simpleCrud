@@ -6,8 +6,8 @@ class Model
 	private $pass 	= "";
 	private $db	= "simpleCrud";
 	private $mysqli;
-
-	public function execute($q)
+	
+	protected function execute($q)
 	{
 		$this->mysqli = new mysqli($this->host, $this->user, $this->pass, $this->db);
 		return $this->mysqli->query($q);

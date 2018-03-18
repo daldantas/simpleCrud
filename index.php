@@ -1,12 +1,14 @@
 <?php require_once "Core/init.php" ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
+
     <!--Import Google Icon Font-->
+    <meta name="description" content="A simple example of CRUD PHP object-oriented with MVC architecture pattern and MaterializeCss frontend.">
+    <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -14,10 +16,10 @@
   <header>
     <nav class="teal">
       <div class="container nav-wrapper">
-        <a href="?url=users/index" class="brand-logo">CRUD MVC OO with page control</a>
+        <a href="" class="brand-logo">CRUD</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <!-- <li><a href=""></a></li> -->
-          <!-- <li><a href=""></a></li> -->
+          <li><a href="?url=Users/index">View</a></li>
+          <li><a href="?url=Users/add">Add</a></li>
         </ul>
       </div>
     </nav>

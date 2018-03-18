@@ -2,24 +2,48 @@
 require_once "Models/User.php";
 class Users extends User
 {
+  private $dados;
   public function index()
   {
-    $dados['view'] = 'Views/users/view';
-    $dados['users'] = $this->selectAll();
-    return $dados;
+    $this->dados['view'] = 'Views/users/view';
+    $this->dados['users'] = $this->selectAll();
+    return $this->dados;
   }
+
   public function add()
   {
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $this->insert($_POST);
-        $dados = $this->index();
+        $this->dados = $this->index();
     }
     else
     {
-      $dados['view'] = 'Views/users/add';
+      $this->dados['view'] = 'Views/users/add';
     }
-    return $dados;
+    return $this->dados;
+  }
+  
+  public function edit($id)
+  {
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $_POST['id'] = $id;
+        $this->update($_POST);
+        $this->dados = $this->index();
+    }
+    else
+    {
+      $this->dados['user'] = $this->selectOne(['id'=>$id]);
+      $this->dados['view'] = 'Views/users/edit';
+    }
+    return $this->dados;
+  }
+  public function remove($id)
+  {
+    $this->delete(['id'=>$id]);
+    $this->dados = $this->index();
+    return $this->dados;
   }
 }
 ?>
