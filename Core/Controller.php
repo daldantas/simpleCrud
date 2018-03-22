@@ -9,7 +9,7 @@ class Controller
 	private $dados;
 	function __construct()
 	{
-		$this->url = isset($_GET['url']) ? explode('/', $_GET['url']) : [0 => 'users', 1 => 'index'];
+		$this->url = isset($_GET['url']) ? explode('/', $_GET['url']) : [0 => 'Users', 1 => 'index'];
 		$this->controller = $this->url[0];
 		$this->method	= $this->url[1];
 		$method = $this->method;
