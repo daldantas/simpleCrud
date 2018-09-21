@@ -15,6 +15,7 @@
         <td><?=$u['email']?></td>
         <td><?=$u['cpf']?></td>
         <td>
+          <a href="?url=Users/getOne/<?=$u['id']?>"><i class="material-icons black-text">remove_red_eye</i></a>
           <a href="?url=Users/edit/<?=$u['id']?>"><i class="material-icons blue-text">edit</i></a>
           <a href="?url=Users/remove/<?=$u['id']?>"><i class="material-icons red-text">delete</i></a>
         </td>

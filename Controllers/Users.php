@@ -9,7 +9,12 @@ class Users extends User
     $this->dados['users'] = $this->selectAll();
     return $this->dados;
   }
-
+  public function getOne($id)
+  {
+    $this->dados['view'] = 'Views/users/viewOne';
+    $this->dados['users'] = $this->selectOne($id);
+    return $this->dados;
+  }
   public function add()
   {
     if ($_SERVER["REQUEST_METHOD"] == "POST")

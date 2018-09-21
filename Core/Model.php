@@ -4,7 +4,7 @@ class Model
 	private $host 	= "localhost";
 	private $user	= "root";
 	private $pass 	= "";
-	private $db	= "simpleCrud";
+	private $db	= "simplecrud";
 	private $mysqli;
 	
 	protected function execute($q)
